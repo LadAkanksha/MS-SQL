@@ -1,0 +1,17 @@
+Que.1)Execute a literal select statement that returns your name.
+--->  SELECT 'Akanksha Chandrakant Lad' as Name;
+
+Que.2)Write the literal select statement that evaluates the product of 7 and 4.
+--->  SELECT 7*5 AS Product;
+
+Que.3)Write the literal select statement that takes the difference of 7 and 4 then multiplies
+that difference by 8.
+--->  SELECT (7-4)*8 AS Result;
+
+Que.4)Write a literal select statement that returns the phrase “Brewster’s SQL Training
+Class”
+--->  SELECT 'Brewstes'' SQL Training Class' AS Phrase;
+
+Que.5)Execute a literal SELECT statement that returns the phrase “Day 1 of Training” in
+one column and the result of 5*3 in another column.
+--->  SELECT 'Day 1 of Training' AS Phrase, 5*3 as '5*3';
