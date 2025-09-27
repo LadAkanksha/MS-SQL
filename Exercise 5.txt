@@ -1,0 +1,16 @@
+Que.1)Using the Person.Person and Person.Password tables, INNER JOIN the two tables using the BusinessEntityID column and return the FirstName and LastName columns from Person.Person and then PasswordHash column from Person.Password 
+--> SELECT per.FirstName , per.LastName , pas.PasswordHash 
+	FROM Person.Person per INNER JOIN Person.Password pas 
+	ON per.BusinessEntityID = pas.BusinessEntityID;
+
+Que.2)Join the HumanResources.Employee and the HumanResources.EmployeeDepartmentHistory tables together via an INNER JOIN using the BusinessEntityID column.  Return the BusinessEntityID, NationalIDNumber and JobTitle columns from HumanResources.Employee and the DepartmentID, StartDate, and EndDate columns from HumanResources.EmployeeDepartmentHistory.  Notice the number of rows returned.  Why is the row count what it is? 
+--> SELECT e.BusinessEntityID , e.NationalIDNumber , e.JobTitle , edh.DepartmentId , edh.StartDate , edh.EndDate
+	FROM HumanResources.Employee e INNER JOIN HumanResources.EmployeeDepartmentHistory edh
+	ON e.BusinessEntityID = edh.BusinessEntityID;
+
+Que.3)Expand upon the query used in question 1.  Using the existing query, add another INNER JOIN to the Person.EmailAddress table and include the EmailAddress column in your select statement.
+--> SELECT per.FirstName , per.LastName , pas.PasswordHash, eaddr.EmailAddress
+	FROM Person.Person per INNER JOIN Person.Password pas 
+	ON per.BusinessEntityID = pas.BusinessEntityID INNER JOIN Person.EmailAddress eaddr
+	ON eaddr.BusinessEntityID = per.BusinessEntityID;
+
